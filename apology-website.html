@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffe4ef">
+<title>A Little Apology 💗</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;font-family:"Trebuchet MS",sans-serif;color:#704d68;background:linear-gradient(135deg,#ffe4ef,#eee5ff,#fff1e8);overflow-x:hidden}
+.container{position:relative;z-index:1;max-width:850px;margin:auto;padding:45px 18px;text-align:center}
+.tag{display:inline-block;background:white;padding:9px 18px;border-radius:30px;color:#bd6895;font-size:12px;letter-spacing:1px}
+h1{font:bold clamp(36px,7vw,55px) Georgia,serif;color:#bd6895;margin:22px 0 12px}
+.subtitle{line-height:1.7;margin-bottom:32px}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.person{background:#ffffffdf;border:2px solid white;border-radius:25px;padding:30px 15px;cursor:pointer;box-shadow:0 12px 35px #9c638220;transition:.25s}
+.person:hover{transform:translateY(-6px)}
+.emoji{font-size:48px}.person .emoji{font-size:55px}
+.person h2,.letter h2{color:#b75f91;font-family:Georgia,serif;margin:12px 0}
+.person p{font-size:14px;color:#987b91;margin-bottom:15px}
+button{border:0;border-radius:30px;padding:12px 19px;font-weight:bold;cursor:pointer;transition:.2s;font-size:14px}
+button:hover{transform:scale(1.04)}button:disabled{cursor:default;transform:none}
+.primary{background:#e98db5;color:white}.secondary,.back{background:#f0e7f3;color:#795e83}.back{margin-top:22px}
+.modal{display:none;position:fixed;inset:0;background:#5a3b5970;align-items:center;justify-content:center;padding:20px;z-index:10}
+.modal-box{background:#fffafd;width:min(370px,100%);padding:30px 23px;border-radius:27px;box-shadow:0 15px 50px #44224430;text-align:center;animation:pop .25s ease}
+@keyframes pop{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:scale(1)}}
+.modal-box h2{color:#b75f91;font-family:Georgia,serif;margin:12px 0}.modal-box p{line-height:1.6}
+.modal-buttons{display:flex;justify-content:center;gap:12px;margin-top:20px;flex-wrap:wrap}
+.password-input{width:100%;margin-top:20px;padding:15px;border:2px solid #f1c5d9;border-radius:15px;text-align:center;font-size:24px;letter-spacing:8px;outline:none;background:#fff5f9;color:#8c5274}
+.password-input:focus{border-color:#d984ad}.error{color:#ce5d82;font-size:13px;font-weight:bold;min-height:25px;margin-top:12px}
+.letter{display:none;background:#ffffffdf;border:2px solid white;border-radius:26px;padding:25px 20px;box-shadow:0 12px 35px #9c638220;text-align:center}
+.letter.open{animation:letterOpen .55s ease}@keyframes letterOpen{from{opacity:0;transform:translateY(25px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+.message{background:#fff3f8;padding:22px 17px;border-radius:18px;line-height:1.85;font-size:15px;margin:20px 0}
+.actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}.retry{display:none;width:100%;margin-top:14px;background:#a47bd0;color:white;line-height:1.5}
+.status{margin-top:17px;min-height:42px;color:#b45e91;font-weight:bold;line-height:1.6}.footer{margin-top:32px;font-size:13px;color:#987b91}
+.heart{position:fixed;bottom:-30px;pointer-events:none;animation:float 8s linear infinite;z-index:0}@keyframes float{to{transform:translateY(-110vh) rotate(30deg);opacity:0}}
+@media(max-width:500px){.container{padding:35px 14px}.cards{gap:12px}.person{padding:24px 8px}.person .emoji{font-size:42px}.person h2{font-size:20px}.person button{padding:10px 12px;font-size:12px}}
+@media(max-width:340px){.cards{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main class="container">
+  <div class="tag">💌 OFFICIAL APOLOGY LETTER 💌</div>
+  <h1>A Little Apology 🥺</h1>
+  <p class="subtitle" id="subtitle">Two special people, two special letters.<br>Choose your name to unlock your surprise! 💗</p>
+
+  <section class="cards" id="home">
+    <div class="person" role="button" tabindex="0" onclick="openCheck('anurag')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openCheck('anurag')}">
+      <div class="emoji">🧸🌷</div><h2>Anurag</h2><p>Your special letter awaits 💗</p><button class="primary" type="button" onclick="event.stopPropagation();openCheck('anurag')">Open my letter 💌</button>
+    </div>
+    <div class="person" role="button" tabindex="0" onclick="openCheck('paro')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openCheck('paro')}">
+      <div class="emoji">🐰🌸</div><h2>Paro</h2><p>Your special letter awaits 💜</p><button class="primary" type="button" onclick="event.stopPropagation();openCheck('paro')">Open my letter 💌</button>
+    </div>
+  </section>
+
+  <section class="letter" id="letter-anurag">
+    <div class="emoji">🧸🌷</div><h2>Dear Anuragggg!</h2>
+    <div class="message">
+      Anuraggg! I'm sowwyyyy! 🥺💗<br><br>
+      Please don't be angwy with meee. 🥹👉👈<br><br>
+      I've brought you an imaginary bouquet 💐, unlimited virtual hugs 🤗 and the cutest apology everrr!<br><br>
+      Can you please forgive this tiny troublemaker? I promise to be a good girl (but I can't promise I won't annoy you again hehe 🤭).<br><br>
+      Don't keep that disappointed face on, okayyy? I want my happy Anurag backkk! 🧸💕<br><br>
+      <b>Soooo, will you forgive me, pretty please?</b> 🎀<br><br>
+      <i>Your little troublemaker is waitinggg!</i>
+    </div>
+    <div class="actions"><button class="primary" type="button" onclick="accept('anurag')">Accept my apology 💗</button><button class="secondary" type="button" onclick="decline('anurag')">Not yet 😤</button></div>
+    <button class="retry" id="retry-anurag" type="button" onclick="tryAgain('anurag')">Try again, you must accept my apology 🥺👉👈</button>
+    <div class="status" id="status-anurag" aria-live="polite"></div>
+    <button class="back" type="button" onclick="goHome()">← Back to home</button>
+  </section>
+
+  <section class="letter" id="letter-paro">
+    <div class="emoji">🐰🌸</div><h2>Dear Paroooo!</h2>
+    <div class="message">
+      Okayyy, first of all, don't be so dramatic! 🙄😂<br><br>
+      I know I've disappointed you, and yes, I'm sorryyy! 🥹💗<br><br>
+      Here's your apology, wrapped in flowers, cuteness and just a tiny bit of attitude. 💐<br><br>
+      Now stop giving me that disappointed look and accept my apology already!<br><br>
+      <b>Forgive me? Or do I have to send another 100 apology letters?</b> 😭<br><br>
+      With love (and limited patience), 🎀💕
+    </div>
+    <div class="actions"><button class="primary" type="button" onclick="accept('paro')">Accept my apology 💗</button><button class="secondary" type="button" onclick="decline('paro')">Not yet 😤</button></div>
+    <button class="retry" id="retry-paro" type="button" onclick="tryAgain('paro')">Try again, you must accept my apology 🥺👉👈</button>
+    <div class="status" id="status-paro" aria-live="polite"></div>
+    <button class="back" type="button" onclick="goHome()">← Back to home</button>
+  </section>
+  <div class="footer">Made with a little guilt, lots of love & too many hearts 💞</div>
+</main>
+
+<div class="modal" id="identityModal" role="dialog" aria-modal="true" aria-labelledby="identityQuestion">
+  <div class="modal-box"><div class="emoji">🥺💌</div><h2>Wait a second!</h2><p id="identityQuestion">Are you Anurag?</p>
+    <div class="modal-buttons"><button class="primary" type="button" onclick="confirmIdentity()">YES 💗</button><button class="secondary" type="button" onclick="wrongPerson()">NO 🙈</button></div>
+  </div>
+</div>
+<div class="modal" id="passwordModal" role="dialog" aria-modal="true" aria-labelledby="passwordTitle">
+  <div class="modal-box"><div class="emoji">🔐💗</div><h2>A little secret!</h2><p id="passwordTitle">Enter your secret password!</p>
+    <form id="passwordForm"><input class="password-input" type="password" id="passwordInput" placeholder="••••" maxlength="4" inputmode="numeric" pattern="[0-9]{4}" autocomplete="off" aria-label="Enter your four digit password" required><div class="error" id="passwordError" aria-live="polite"></div><button class="primary" type="submit">Unlock my letter 💗</button></form>
+    <button class="secondary" style="margin-top:15px" type="button" onclick="backToIdentity()">← Back</button>
+  </div>
+</div>
+
+<script>
+'use strict';
+const passwords = { anurag: '1207', paro: '1717' };
+let selectedPerson = '';
+const $ = id => document.getElementById(id);
+function openCheck(person) {
+  selectedPerson = person;
+  const name = person === 'anurag' ? 'Anurag' : 'Paro';
+  $('identityQuestion').textContent = 'Are you ' + name + '?';
+  $('identityModal').style.display = 'flex';
+}
+function confirmIdentity() {
+  $('identityModal').style.display = 'none';
+  const name = selectedPerson === 'anurag' ? 'Anurag' : 'Paro';
+  $('passwordTitle').textContent = 'Only ' + name + ' knows the secret! 🤫';
+  $('passwordInput').value = '';
+  $('passwordError').textContent = '';
+  $('passwordModal').style.display = 'flex';
+  setTimeout(() => $('passwordInput').focus(), 100);
+}
+function wrongPerson() { $('identityModal').style.display = 'none'; selectedPerson = ''; }
+function backToIdentity() { $('passwordModal').style.display = 'none'; $('identityModal').style.display = 'flex'; }
+$('passwordForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  if (!selectedPerson || !Object.prototype.hasOwnProperty.call(passwords, selectedPerson)) return;
+  const entered = $('passwordInput').value;
+  if (entered === passwords[selectedPerson]) {
+    $('passwordModal').style.display = 'none';
+    $('home').style.display = 'none';
+    $('subtitle').style.display = 'none';
+    $('letter-anurag').style.display = 'none';
+    $('letter-paro').style.display = 'none';
+    const letter = $('letter-' + selectedPerson);
+    letter.style.display = 'block';
+    letter.classList.remove('open');
+    void letter.offsetWidth;
+    letter.classList.add('open');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    $('passwordError').textContent = 'Hehe, wrong password! Try again, pookie! 🙈💗';
+    $('passwordInput').value = '';
+    $('passwordInput').focus();
+  }
+});
+function goHome() {
+  $('letter-anurag').style.display = 'none'; $('letter-paro').style.display = 'none';
+  $('home').style.display = 'grid'; $('subtitle').style.display = 'block';
+  selectedPerson = ''; window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+function accept(person) {
+  const name = person === 'anurag' ? 'Anurag' : 'Paro';
+  $('status-' + person).textContent = 'YAYYYYY! 🥹💗 ' + name + ' forgave me! Sending unlimited hugs! 🤗';
+  $('retry-' + person).style.display = 'none';
+  document.querySelectorAll('#letter-' + person + ' .actions button').forEach(button => { button.disabled = true; button.style.opacity = '.55'; });
+}
+function decline(person) {
+  $('status-' + person).textContent = "WAITTT! You're breaking my heart! 😭💔";
+  $('retry-' + person).style.display = 'block';
+}
+function tryAgain(person) {
+  $('status-' + person).textContent = 'One more chance? Pretty pleaseee? 🥺💐';
+  $('retry-' + person).style.display = 'none';
+}
+const symbols = ['💗', '💕', '🌸', '✨', '♡'];
+for (let i = 0; i < 18; i++) {
+  const heart = document.createElement('span'); heart.className = 'heart';
+  heart.textContent = symbols[i % symbols.length];
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.animationDelay = Math.random() * 8 + 's';
+  heart.style.fontSize = (15 + Math.random() * 18) + 'px';
+  document.body.appendChild(heart);
+}
+</script>
+</body>
+</html>
